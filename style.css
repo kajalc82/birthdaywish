@@ -1,0 +1,166 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(225, 43, 106);
+    }
+    
+    .wishCard{
+        position: relative;
+        width: 250px;
+        height:350px;
+        cursor: pointer;
+        transform-style: preserve-3d;
+        transform: perspective(2500px);
+        transition: 1s;
+    }
+    
+    .wishCard:hover {
+        transform: perspective(2500px) rotate(5deg);
+        box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.19), 0 10px 100px rgba(0, 0, 0, 0.3);
+    }
+    
+    .wishCard:hover .cardFront{
+        transform: rotateY(-160deg);
+    }
+    
+    .wishCard:hover .wish {
+        visibility: hidden;
+    }
+    
+    .cardFront{
+        position: relative;
+        background-color: #fff;
+        width: 250px;
+        height: 350px;
+        overflow: hidden;
+        transform-origin: left;
+        box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.19), 30px 0 50px rgba(0, 0, 0, 0.25);
+        transition: 0.6s;
+    
+    }
+    
+    .wish{
+        font-family: Tahoma, sans-serif ;
+        text-align: center;
+        margin: 30px;
+        background-image: linear-gradient(120deg, #a9d2d8 0%, #469ba2 100%);
+        transition: 0.1s;
+    }
+    
+    .stationary{
+        position: inherit;
+    }
+    
+    .stat-1,
+    .stat-2,
+    .stat-3,
+    .stat-4 {
+        position: absolute;
+        width: 85px;
+        height: 95px;
+        border-radius: 50%;
+    }
+    
+    .stat-1{
+        background-color: rgba(255, 40, 90, 0.7);
+        left: -10px;
+        top: 50px;
+    }
+    
+    .stat-2{
+        background-color: rgba(9, 215, 160, 0.7);
+        left: 50px;
+        top: 20px;
+    }
+    
+    .stat-3{
+        background-color: rgba(255, 186, 26, 0.7);
+        left: 110px;
+        top: 50px;
+    }
+    
+    .stat-4{
+        background-color: rgba(12, 122, 159, 0.7);
+        left: 170px;
+        top: 50px;
+    }
+    
+    .stat-1::before,
+    .stat-2::before,
+    .stat-3::before,
+    .stat-4::before{
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 155px;
+        background-color: #a4a4a4;
+        top: 95px;
+        left: 43px;
+    }
+    
+    .stat-1::after,
+    .stat-2::after,
+    .stat-3::after,
+    .stat-4::after
+    {
+        content:"";
+        position: absolute;
+        border-right: 7px solid transparent;
+        border-left: 7px solid transparent;
+        top: 94px;
+        left: 37px;
+    }
+    
+    .stat-1::after{
+        border-bottom: 10px solid #ff3e6b;
+    }
+    .stat-2::after{
+        border-bottom: 10px solid #04b183;
+    }
+    .stat-3::after{
+        border-bottom: 10px solid #ffc94c;
+    }
+    .stat-4::after{
+        border-bottom: 10px solid #139abd;
+    }
+    
+    .cardInside{
+        position: absolute;
+        background-color: #fff;
+        width: 250px;
+        height: 350px;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.19);
+    }
+    
+    p {
+     font-family: "Brush Script MT", cursive;
+     margin: 20px;
+     color: #333;
+    }
+    
+    span{
+        position: absolute;
+        top: 270px;
+        left:20px
+    }
+    
+    .name{
+        position: absolute;
+        /* left: 150px; */
+        top: 270px; 
+        color: #333;
+    }
+    
+    .back{
+        font-family: Tahoma, sans-serif;
+        color: #333;
+        text-align: center;
+        margin: 15px;
+    }
+    
+    
